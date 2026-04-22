@@ -89,8 +89,9 @@ Resolve work in this order:
 5. `.agent/plans/active.md`
 6. repository reality
 7. local skills
-8. environment/MCP tools
-9. human clarification
+8. karpathy-guidelines (for coding decisions)
+9. environment/MCP tools
+10. human clarification
 
 Project reality beats assumptions.
 
@@ -112,6 +113,10 @@ Examples:
 - typecheck
 - diagnose
 - security scan
+
+### Karpathy Guidelines
+
+See [.opencode/skills/karpathy-guidelines/SKILL.md](./.opencode/skills/karpathy-guidelines/SKILL.md) for full guidelines.
 
 ### Environment / MCP Tools
 
@@ -391,11 +396,12 @@ At the start of any task:
 1. read `.agent/plans/active.md`
 2. read `.agent/rules/CRITICAL.md`
 3. read relevant directives and domain rules
-4. inspect repo, branch, and git state
-5. inspect skills/tools
-6. confirm or create branch
-7. update plan
-8. execute
+4. load karpathy-guidelines skill for coding decisions
+5. inspect repo, branch, and git state
+6. inspect skills/tools
+7. confirm or create branch
+8. update plan
+9. execute
 
 If `.agent/` is missing, create the minimal safe structure when allowed or ask the user to do so first.
 
