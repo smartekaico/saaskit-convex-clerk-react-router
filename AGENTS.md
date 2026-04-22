@@ -6,10 +6,17 @@ Follow [AGENT.md](./AGENT.md) "Antigravity Protocol" for agent workflow (plannin
 ## Commands
 - `bun run dev` - Start dev server (http://localhost:5173)
 - `bun run build` - Build (runs tsc -b first)
-- `bun run lint` - ESLint
-- `npx convex dev` - Initialize/start Convex backend
-- `npx shadcn-ui@latest add <component>` - Add Shadcn UI components
-- `npx convex deploy` - Deploy Convex backend
+- `bun run lint` - Biome lint
+- `bun run test` - Vitest tests
+- `bun run test:ui` - Vitest UI
+- `bunx convex dev` - Initialize/start Convex backend
+- `bunx shadcn@latest add <component>` - Add Shadcn UI components
+- `bunx convex deploy` - Deploy Convex backend
+
+## Browser Testing
+- Install: `npm i -g agent-browser && agent-browser install`
+- Load skills: `agent-browser skills get core` (workflows & patterns)
+- Desktop apps: `agent-browser skills get electron`
 
 ## Key Facts
 - React Router 7 for routing (file-based in `src/routes/`)
@@ -30,4 +37,3 @@ Follow [AGENT.md](./AGENT.md) "Antigravity Protocol" for agent workflow (plannin
 ## Biome Commands
 - `bun run lint` - Lint (biome check)
 - `bun run format` - Format (biome format --write)
-- `bunx --bun @biomejs/biome check --write` - Format, lint, organize imports
