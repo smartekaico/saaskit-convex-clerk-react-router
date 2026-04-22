@@ -1,10 +1,10 @@
-# SaaS Kit - React 19 + TanStack Router + Convex + Clerk
+# SaaS Kit - React 19 + React Router 7 + Convex + Clerk
 
 A complete, production-ready SaaS starter kit built with modern technologies. Perfect for quickly launching your next SaaS application with authentication, subscriptions, and a professional UI.
 
 ## 🚀 Tech Stack
 
-- **Frontend**: React 19, TypeScript, TanStack Router
+- **Frontend**: React 19, TypeScript, React Router 7
 - **UI**: Shadcn/ui + TailwindCSS
 - **Backend**: Convex (real-time database & functions)
 - **Authentication**: Clerk (with subscription support)
@@ -14,7 +14,7 @@ A complete, production-ready SaaS starter kit built with modern technologies. Pe
 ## ✨ Features
 
 - ✅ **Modern React 19** with latest features
-- ✅ **Type-safe routing** with TanStack Router
+- ✅ **Type-safe routing** with React Router 7
 - ✅ **Beautiful UI** with Shadcn/ui components
 - ✅ **Authentication** with Clerk
 - ✅ **Real-time backend** with Convex
@@ -30,7 +30,7 @@ A complete, production-ready SaaS starter kit built with modern technologies. Pe
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn
+- bun
 - Clerk account (free)
 - Convex account (free)
 
@@ -39,7 +39,7 @@ A complete, production-ready SaaS starter kit built with modern technologies. Pe
 ```bash
 git clone <your-repo>
 cd saas-kit-react-convex-clerk
-npm install
+bun install
 ```
 
 ### 2. Environment Setup
@@ -84,7 +84,7 @@ Follow the prompts to complete the setup.
 ### 5. Start Development
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Your app will be available at `http://localhost:5173`
@@ -105,7 +105,7 @@ src/
 ├── lib/
 │   ├── utils.ts         # Utility functions
 │   └── convex.ts        # Convex client
-├── router.tsx           # TanStack Router configuration
+├── routes/             # React Router 7 routes
 ├── App.tsx              # Main app component
 └── index.css            # Global styles & Tailwind
 
@@ -126,7 +126,7 @@ convex/
 ### Pages
 
 - Edit existing pages in `src/pages/`
-- Add new routes in `src/router.tsx`
+- Add new routes in `src/routes/`
 - Update navigation in `src/components/layout/header.tsx`
 
 ### Database Schema
@@ -138,17 +138,17 @@ convex/
 ## 🔧 Available Scripts
 
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
+bun run dev          # Start development server
+bun run build        # Build for production
+bun run preview      # Preview production build
+bun run lint         # Run ESLint
 ```
 
 ## 🚀 Deployment
 
 ### Frontend (Vercel, Netlify, etc.)
 
-1. Build your app: `npm run build`
+1. Build your app: `bun run build`
 2. Deploy the `dist` folder to your hosting platform
 3. Set environment variables in your hosting platform
 4. Update Clerk redirect URLs to your production domain
@@ -231,7 +231,7 @@ MIT License - see LICENSE file for details
 
 - 📚 [Clerk Documentation](https://clerk.com/docs)
 - 📚 [Convex Documentation](https://docs.convex.dev)
-- 📚 [TanStack Router Documentation](https://tanstack.com/router)
+- 📚 [React Router Documentation](https://reactrouter.com)
 - 📚 [Shadcn/ui Documentation](https://ui.shadcn.com)
 
 ## 🎯 Next Steps
