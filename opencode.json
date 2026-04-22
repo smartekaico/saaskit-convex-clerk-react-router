@@ -10,6 +10,11 @@
       "type": "remote",
       "url": "https://jira.example.com/mcp",
       "enabled": true
+    },
+    "convex": {
+      "type": "local",
+      "command": ["npx", "-y", "convex@latest", "mcp", "start"],
+      "enabled": true
     }
   }
 }
