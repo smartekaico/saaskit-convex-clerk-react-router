@@ -1,12 +1,6 @@
 import { isRouteErrorResponse, Link, Outlet, Scripts, ScrollRestoration } from 'react-router';
 
-const CLERK_PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-if (!CLERK_PUBLISHABLE_KEY) {
-  throw new Error('Missing VITE_CLERK_PUBLISHABLE_KEY environment variable');
-}
-
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout() {
   return (
     <html lang="en">
       <head>
@@ -15,7 +9,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <title>SaaS Kit</title>
       </head>
       <body>
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
