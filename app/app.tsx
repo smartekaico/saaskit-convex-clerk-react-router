@@ -1,4 +1,14 @@
-import { Link, Outlet } from 'react-router';
+import { Link, Outlet, redirect } from 'react-router';
+import type { Route } from './+types/app';
+
+// Loader protects all /app/* routes - redirect to sign-in if not authenticated
+export const loader: Route.LoaderFunction = async ({ context }) => {
+  const userId = context.userId;
+  if (!userId) {
+    throw redirect('/sign-in');
+  }
+  return { userId };
+};
 
 export default function App() {
   return (
@@ -12,9 +22,6 @@ export default function App() {
           <nav className="flex items-center space-x-4">
             <Link to="/pricing" className="text-sm font-medium">
               Pricing
-            </Link>
-            <Link to="/dashboard" className="text-sm font-medium">
-              Dashboard
             </Link>
           </nav>
         </div>

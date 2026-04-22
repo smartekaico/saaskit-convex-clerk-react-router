@@ -30,6 +30,9 @@ export const createUser = mutation(async (ctx) => {
   const user = await ctx.db.insert('users', {
     clerkId,
     email,
+    name: (await ctx.auth.getUserIdentity())?.name,
+    image: (await ctx.auth.getUserIdentity())?.imageUrl,
+    role: 'user',
     createdAt: Date.now(),
     subscriptionStatus: 'free',
     subscriptionTier: 'free',
