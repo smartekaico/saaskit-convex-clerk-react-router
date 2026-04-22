@@ -1,6 +1,11 @@
-import { Link, Outlet, UNSAFE_withComponentProps } from "react-router";
+import { Link, Outlet, UNSAFE_withComponentProps, redirect } from "react-router";
 import { jsx, jsxs } from "react/jsx-runtime";
 //#region app/app.tsx
+var loader = async ({ context }) => {
+	const userId = context.userId;
+	if (!userId) throw redirect("/sign-in");
+	return { userId };
+};
 var app_default = UNSAFE_withComponentProps(function App() {
 	return /* @__PURE__ */ jsxs("div", {
 		className: "min-h-screen bg-background",
@@ -15,21 +20,17 @@ var app_default = UNSAFE_withComponentProps(function App() {
 						className: "text-xl font-bold",
 						children: "SaaS Kit"
 					})]
-				}), /* @__PURE__ */ jsxs("nav", {
+				}), /* @__PURE__ */ jsx("nav", {
 					className: "flex items-center space-x-4",
-					children: [/* @__PURE__ */ jsx(Link, {
+					children: /* @__PURE__ */ jsx(Link, {
 						to: "/pricing",
 						className: "text-sm font-medium",
 						children: "Pricing"
-					}), /* @__PURE__ */ jsx(Link, {
-						to: "/dashboard",
-						className: "text-sm font-medium",
-						children: "Dashboard"
-					})]
+					})
 				})]
 			})
 		}), /* @__PURE__ */ jsx("main", { children: /* @__PURE__ */ jsx(Outlet, {}) })]
 	});
 });
 //#endregion
-export { app_default as default };
+export { app_default as default, loader };

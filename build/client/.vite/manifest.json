@@ -1,6 +1,6 @@
 {
   "app/app.tsx?__react-router-build-client-route": {
-    "file": "assets/app-ByOrswVC.js",
+    "file": "assets/app-Ci3roHrh.js",
     "name": "app",
     "src": "app/app.tsx?__react-router-build-client-route",
     "isEntry": true
@@ -18,12 +18,12 @@
     "isEntry": true
   },
   "app/root.tsx?__react-router-build-client-route": {
-    "file": "assets/root-rgdKZhHF.js",
+    "file": "assets/root-lvk6dxVU.js",
     "name": "root",
     "src": "app/root.tsx?__react-router-build-client-route",
     "isEntry": true,
     "css": [
-      "assets/root-CJsIFQ40.css"
+      "assets/root-DIOBL1KR.css"
     ]
   },
   "app/signin.tsx?__react-router-build-client-route": {
