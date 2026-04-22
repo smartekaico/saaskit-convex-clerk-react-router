@@ -1,16 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": ["AGENT.md", ".opencode/agents/*.md", ".opencode/docs/react-router7/*.md"],
+  "instructions": [
+    "AGENT.md",
+    ".opencode/agents/*.md",
+    ".opencode/docs/react-router7/*.md"
+  ],
   "mcp": {
     "jira": {
       "type": "remote",
       "url": "https://jira.example.com/mcp",
       "enabled": true
-    },
-    "convex-mcp": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "convex@latest", "mcp", "start"]
     }
   }
 }

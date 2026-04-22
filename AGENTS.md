@@ -1,7 +1,7 @@
 # AGENTS.md - saas-kit-react-convex-clerk
 
 ## Workflow Reference
-Follow [AGENT.md](./AGENT.md) "Antigravity Protocol" for agent workflow (planning, git discipline, logging, response format, validation).
+Follow [AGENT.md](./AGENT.md) "AI Code Editor Protocol" for agent workflow (planning, git discipline, logging, response format, validation).
 
 ## Commands
 - `bun run dev` - Start dev server (http://localhost:5173)
