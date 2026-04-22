@@ -18,10 +18,13 @@
     "isEntry": true
   },
   "app/root.tsx?__react-router-build-client-route": {
-    "file": "assets/root-B4aJF4W0.js",
+    "file": "assets/root-rgdKZhHF.js",
     "name": "root",
     "src": "app/root.tsx?__react-router-build-client-route",
-    "isEntry": true
+    "isEntry": true,
+    "css": [
+      "assets/root-CJsIFQ40.css"
+    ]
   },
   "app/signin.tsx?__react-router-build-client-route": {
     "file": "assets/signin-Bd0KS7RK.js",
