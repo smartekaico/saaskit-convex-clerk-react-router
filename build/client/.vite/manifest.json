@@ -1,0 +1,44 @@
+{
+  "app/app.tsx?__react-router-build-client-route": {
+    "file": "assets/app-ByOrswVC.js",
+    "name": "app",
+    "src": "app/app.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/landing.tsx?__react-router-build-client-route": {
+    "file": "assets/landing-CPfDxYuo.js",
+    "name": "landing",
+    "src": "app/landing.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/pricing.tsx?__react-router-build-client-route": {
+    "file": "assets/pricing-CZ6H14XV.js",
+    "name": "pricing",
+    "src": "app/pricing.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-B4aJF4W0.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/signin.tsx?__react-router-build-client-route": {
+    "file": "assets/signin-Bd0KS7RK.js",
+    "name": "signin",
+    "src": "app/signin.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/signup.tsx?__react-router-build-client-route": {
+    "file": "assets/signup-B0MVvPm0.js",
+    "name": "signup",
+    "src": "app/signup.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx": {
+    "file": "assets/entry.client-BWxjU3TI.js",
+    "name": "entry.client",
+    "src": "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx",
+    "isEntry": true
+  }
+}
