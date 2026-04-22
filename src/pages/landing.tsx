@@ -1,26 +1,26 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowRight, CheckCircle, Zap, Shield, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Users, Zap } from 'lucide-react';
+import Header from '../components/layout/header';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import Header from '../components/layout/header';
 
 const LandingPage = () => {
   const features = [
     {
       icon: <Zap className="h-6 w-6 text-primary" />,
       title: 'Lightning Fast',
-      description: 'Built with modern React 19 and optimized for performance.'
+      description: 'Built with modern React 19 and optimized for performance.',
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with Clerk authentication.'
+      description: 'Enterprise-grade security with Clerk authentication.',
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
       title: 'Team Collaboration',
-      description: 'Built-in features for team management and collaboration.'
-    }
+      description: 'Built-in features for team management and collaboration.',
+    },
   ];
 
   const pricingPlans = [
@@ -30,7 +30,7 @@ const LandingPage = () => {
       period: '/month',
       description: 'Perfect for getting started',
       features: ['Basic features', 'Up to 5 projects', 'Community support'],
-      cta: 'Get Started'
+      cta: 'Get Started',
     },
     {
       name: 'Pro',
@@ -39,7 +39,7 @@ const LandingPage = () => {
       description: 'For growing teams',
       features: ['All features', 'Unlimited projects', 'Priority support', 'Advanced analytics'],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -47,14 +47,14 @@ const LandingPage = () => {
       period: '/month',
       description: 'For large organizations',
       features: ['Everything in Pro', 'Custom integrations', 'Dedicated support', 'SLA guarantee'],
-      cta: 'Contact Sales'
-    }
+      cta: 'Contact Sales',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
@@ -63,7 +63,7 @@ const LandingPage = () => {
             <span className="text-primary block">Faster Than Ever</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            A complete starter kit with React 19, TanStack Router, Shadcn/ui, Convex, and Clerk. 
+            A complete starter kit with React 19, TanStack Router, Shadcn/ui, Convex, and Clerk.
             Everything you need to launch your SaaS application quickly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,14 +84,12 @@ const LandingPage = () => {
       <section className="py-20 px-4 bg-muted/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Need to Succeed
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything You Need to Succeed</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our SaaS kit comes with all the essential features to build and scale your business.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
               <Card key={index}>
@@ -112,14 +110,12 @@ const LandingPage = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Simple, Transparent Pricing
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Choose the plan that fits your needs. All plans include our core features.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <Card key={index} className={plan.popular ? 'border-primary shadow-lg' : ''}>
@@ -147,11 +143,7 @@ const LandingPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className="w-full" 
-                    variant={plan.popular ? "default" : "outline"}
-                    asChild
-                  >
+                  <Button className="w-full" variant={plan.popular ? 'default' : 'outline'} asChild>
                     <Link to="/sign-up">{plan.cta}</Link>
                   </Button>
                 </CardContent>
@@ -164,9 +156,7 @@ const LandingPage = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Build Your SaaS?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your SaaS?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join thousands of developers who are building amazing products with our starter kit.
           </p>

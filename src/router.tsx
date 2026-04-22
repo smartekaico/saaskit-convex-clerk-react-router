@@ -15,11 +15,21 @@ const RootLayout = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto p-4">
         <nav className="flex gap-4 mb-8">
-          <a href="/" className="text-blue-600 hover:underline">Home</a>
-          <a href="/pricing" className="text-blue-600 hover:underline">Pricing</a>
-          <a href="/sign-in" className="text-blue-600 hover:underline">Sign In</a>
-          <a href="/sign-up" className="text-blue-600 hover:underline">Sign Up</a>
-          <a href="/dashboard" className="text-blue-600 hover:underline">Dashboard</a>
+          <a href="/" className="text-blue-600 hover:underline">
+            Home
+          </a>
+          <a href="/pricing" className="text-blue-600 hover:underline">
+            Pricing
+          </a>
+          <a href="/sign-in" className="text-blue-600 hover:underline">
+            Sign In
+          </a>
+          <a href="/sign-up" className="text-blue-600 hover:underline">
+            Sign Up
+          </a>
+          <a href="/dashboard" className="text-blue-600 hover:underline">
+            Dashboard
+          </a>
         </nav>
         <div id="route-outlet" />
       </div>

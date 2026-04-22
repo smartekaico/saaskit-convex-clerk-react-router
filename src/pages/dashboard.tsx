@@ -1,7 +1,7 @@
 import { useUser } from '@clerk/clerk-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
 import Header from '../components/layout/header';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
 const DashboardPage = () => {
   const { user, isLoaded } = useUser();
@@ -25,16 +25,14 @@ const DashboardPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <div className="container mx-auto px-4 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight mb-2">
             Welcome back, {user?.firstName || 'User'}!
           </h1>
-          <p className="text-muted-foreground">
-            Here's what's happening with your account today.
-          </p>
+          <p className="text-muted-foreground">Here's what's happening with your account today.</p>
         </div>
 
         {/* Stats Cards */}
@@ -45,45 +43,37 @@ const DashboardPage = () => {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">12</div>
-              <p className="text-xs text-muted-foreground">
-                +2 from last month
-              </p>
+              <p className="text-xs text-muted-foreground">+2 from last month</p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Active Users</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">1,234</div>
-              <p className="text-xs text-muted-foreground">
-                +180 from last month
-              </p>
+              <p className="text-xs text-muted-foreground">+180 from last month</p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Revenue</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">$4,231</div>
-              <p className="text-xs text-muted-foreground">
-                +20.1% from last month
-              </p>
+              <p className="text-xs text-muted-foreground">+20.1% from last month</p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">3.2%</div>
-              <p className="text-xs text-muted-foreground">
-                +0.5% from last month
-              </p>
+              <p className="text-xs text-muted-foreground">+0.5% from last month</p>
             </CardContent>
           </Card>
         </div>
@@ -93,9 +83,7 @@ const DashboardPage = () => {
           <Card>
             <CardHeader>
               <CardTitle>Recent Activity</CardTitle>
-              <CardDescription>
-                Your latest actions and updates
-              </CardDescription>
+              <CardDescription>Your latest actions and updates</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -127,9 +115,7 @@ const DashboardPage = () => {
           <Card>
             <CardHeader>
               <CardTitle>Quick Actions</CardTitle>
-              <CardDescription>
-                Common tasks to get you started
-              </CardDescription>
+              <CardDescription>Common tasks to get you started</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
               <Button className="w-full justify-start" variant="outline">
@@ -146,17 +132,13 @@ const DashboardPage = () => {
               </Button>
             </CardContent>
           </Card>
-
-
         </div>
 
         {/* Subscription Status */}
         <Card>
           <CardHeader>
             <CardTitle>Subscription Status</CardTitle>
-            <CardDescription>
-              Your current plan and usage
-            </CardDescription>
+            <CardDescription>Your current plan and usage</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex items-center justify-between">

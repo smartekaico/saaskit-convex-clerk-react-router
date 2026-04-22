@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link } from '@tanstack/react-router';
 import { UserButton } from '@clerk/clerk-react';
+import { Link } from '@tanstack/react-router';
 import { Menu, X } from 'lucide-react';
-import { Button } from '../ui/button';
+import { useState } from 'react';
 import { cn } from '../../lib/utils';
+import { Button } from '../ui/button';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,11 +41,11 @@ const Header = () => {
 
           {/* Desktop Auth Section */}
           <div className="hidden md:flex items-center space-x-4">
-            <UserButton 
+            <UserButton
               appearance={{
                 elements: {
-                  avatarBox: "w-8 h-8"
-                }
+                  avatarBox: 'w-8 h-8',
+                },
               }}
             />
           </div>
@@ -57,11 +57,7 @@ const Header = () => {
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -75,7 +71,7 @@ const Header = () => {
                   key={item.href}
                   to={item.href}
                   className={cn(
-                    "block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                    'block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors'
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

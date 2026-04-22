@@ -1,10 +1,10 @@
 import { useUser } from '@clerk/clerk-react';
 import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import Header from '../components/layout/header';
 import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
-import Header from '../components/layout/header';
 
 const ProfilePage = () => {
   const { user, isLoaded } = useUser();
@@ -26,14 +26,12 @@ const ProfilePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Profile Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight mb-2">Profile Settings</h1>
-          <p className="text-muted-foreground">
-            Manage your account settings and preferences.
-          </p>
+          <p className="text-muted-foreground">Manage your account settings and preferences.</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -41,43 +39,31 @@ const ProfilePage = () => {
           <Card>
             <CardHeader>
               <CardTitle>Account Information</CardTitle>
-              <CardDescription>
-                Your basic account details and contact information.
-              </CardDescription>
+              <CardDescription>Your basic account details and contact information.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="firstName">First Name</Label>
-                <Input 
-                  id="firstName"
-                  defaultValue={user?.firstName || ''} 
-                  disabled={!isEditing}
-                />
+                <Input id="firstName" defaultValue={user?.firstName || ''} disabled={!isEditing} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="lastName">Last Name</Label>
-                <Input 
-                  id="lastName"
-                  defaultValue={user?.lastName || ''} 
-                  disabled={!isEditing}
-                />
+                <Input id="lastName" defaultValue={user?.lastName || ''} disabled={!isEditing} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input 
+                <Input
                   id="email"
                   type="email"
-                  defaultValue={user?.primaryEmailAddress?.emailAddress || ''} 
+                  defaultValue={user?.primaryEmailAddress?.emailAddress || ''}
                   disabled={!isEditing}
                 />
               </div>
-              
+
               <div className="pt-4">
                 {isEditing ? (
                   <div className="flex space-x-2">
-                    <Button onClick={() => setIsEditing(false)}>
-                      Save Changes
-                    </Button>
+                    <Button onClick={() => setIsEditing(false)}>Save Changes</Button>
                     <Button variant="outline" onClick={() => setIsEditing(false)}>
                       Cancel
                     </Button>
@@ -95,9 +81,7 @@ const ProfilePage = () => {
           <Card>
             <CardHeader>
               <CardTitle>Security</CardTitle>
-              <CardDescription>
-                Manage your password and security settings.
-              </CardDescription>
+              <CardDescription>Manage your password and security settings.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
@@ -125,9 +109,7 @@ const ProfilePage = () => {
           <Card>
             <CardHeader>
               <CardTitle>Subscription</CardTitle>
-              <CardDescription>
-                Your current plan and billing information.
-              </CardDescription>
+              <CardDescription>Your current plan and billing information.</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -156,9 +138,7 @@ const ProfilePage = () => {
           <Card>
             <CardHeader>
               <CardTitle>Preferences</CardTitle>
-              <CardDescription>
-                Customize your application experience.
-              </CardDescription>
+              <CardDescription>Customize your application experience.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
@@ -202,9 +182,7 @@ const ProfilePage = () => {
         <Card className="mt-6 border-destructive">
           <CardHeader>
             <CardTitle className="text-destructive">Danger Zone</CardTitle>
-            <CardDescription>
-              Irreversible and destructive actions.
-            </CardDescription>
+            <CardDescription>Irreversible and destructive actions.</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -215,9 +193,7 @@ const ProfilePage = () => {
                     Permanently delete your account and all associated data.
                   </p>
                 </div>
-                <Button variant="destructive">
-                  Delete Account
-                </Button>
+                <Button variant="destructive">Delete Account</Button>
               </div>
             </div>
           </CardContent>

@@ -1,7 +1,7 @@
 import { Check } from 'lucide-react';
+import Header from '../components/layout/header';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import Header from '../components/layout/header';
 
 const PricingPage = () => {
   const plans = [
@@ -15,10 +15,10 @@ const PricingPage = () => {
         'Basic analytics',
         'Community support',
         '1GB storage',
-        'Basic integrations'
+        'Basic integrations',
       ],
       cta: 'Get Started',
-      popular: false
+      popular: false,
     },
     {
       name: 'Pro',
@@ -33,10 +33,10 @@ const PricingPage = () => {
         'Premium integrations',
         'Team collaboration',
         'API access',
-        'Custom domains'
+        'Custom domains',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -51,17 +51,17 @@ const PricingPage = () => {
         'SLA guarantee',
         'Advanced security',
         'Custom branding',
-        'Training & onboarding'
+        'Training & onboarding',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-16">
@@ -69,7 +69,8 @@ const PricingPage = () => {
             Simple, Transparent Pricing
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that's right for you. All plans include our core features with no hidden fees.
+            Choose the plan that's right for you. All plans include our core features with no hidden
+            fees.
           </p>
         </div>
 
@@ -84,18 +85,16 @@ const PricingPage = () => {
                   </span>
                 </div>
               )}
-              
+
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl">{plan.name}</CardTitle>
                 <div className="mt-4">
                   <span className="text-4xl font-bold">{plan.price}</span>
                   <span className="text-muted-foreground ml-2">/{plan.period}</span>
                 </div>
-                <CardDescription className="mt-2">
-                  {plan.description}
-                </CardDescription>
+                <CardDescription className="mt-2">{plan.description}</CardDescription>
               </CardHeader>
-              
+
               <CardContent>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
@@ -105,12 +104,8 @@ const PricingPage = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  className="w-full" 
-                  variant={plan.popular ? "default" : "outline"}
-                  size="lg"
-                >
+
+                <Button className="w-full" variant={plan.popular ? 'default' : 'outline'} size="lg">
                   {plan.cta}
                 </Button>
               </CardContent>
@@ -121,33 +116,36 @@ const PricingPage = () => {
         {/* FAQ Section */}
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-          
+
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-semibold mb-2">Can I change my plan at any time?</h3>
               <p className="text-muted-foreground">
-                Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and billing is prorated.
+                Yes, you can upgrade or downgrade your plan at any time. Changes take effect
+                immediately and billing is prorated.
               </p>
             </div>
-            
+
             <div>
               <h3 className="text-lg font-semibold mb-2">Is there a free trial?</h3>
               <p className="text-muted-foreground">
-                Yes, all paid plans come with a 14-day free trial. No credit card required to get started.
+                Yes, all paid plans come with a 14-day free trial. No credit card required to get
+                started.
               </p>
             </div>
-            
+
             <div>
               <h3 className="text-lg font-semibold mb-2">What payment methods do you accept?</h3>
               <p className="text-muted-foreground">
                 We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
               </p>
             </div>
-            
+
             <div>
               <h3 className="text-lg font-semibold mb-2">Can I cancel my subscription?</h3>
               <p className="text-muted-foreground">
-                Yes, you can cancel your subscription at any time. You'll retain access until the end of your billing period.
+                Yes, you can cancel your subscription at any time. You'll retain access until the
+                end of your billing period.
               </p>
             </div>
           </div>

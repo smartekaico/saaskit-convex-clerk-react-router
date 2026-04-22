@@ -25,4 +25,9 @@ Follow [AGENT.md](./AGENT.md) "Antigravity Protocol" for agent workflow (plannin
 3. Run `npx convex dev` to set up backend
 
 ## Validation Order
-`bun run lint` -> `bun run build` -> test
+`bun run lint` -> `bun run build`
+
+## Biome Commands
+- `bun run lint` - Lint (biome check)
+- `bun run format` - Format (biome format --write)
+- `bunx --bun @biomejs/biome check --write` - Format, lint, organize imports
