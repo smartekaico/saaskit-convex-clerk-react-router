@@ -1,7 +1,11 @@
-import { startTransition } from 'react';
+import { StrictMode, startTransition } from 'react';
 import { createRoot } from 'react-dom/client';
-import { HydratedRouter } from 'react-router/dom';
+import { BrowserRouter } from 'react-router';
 
 startTransition(() => {
-  createRoot(document.getElementById('root')!).render(<HydratedRouter />);
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <BrowserRouter />
+    </StrictMode>
+  );
 });
